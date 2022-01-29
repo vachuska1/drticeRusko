@@ -1,0 +1,72 @@
+.Inputs {
+  width: 100vw;
+  display: grid;
+  height: auto;
+  justify-content: center;
+  margin: 10px 0;
+  &__Text {
+    font-size: 36px;
+    text-align: center;
+    font-weight: 600;
+    color: rgb(36, 36, 36);
+    margin: 10px 0;
+  }
+  &__Form {
+    margin: 20px 0;
+    width: 1000px;
+    display: grid;
+    grid-template: "name . number . email" 80px "message message message message message" 120px ". . . . button" 50px / 310px 20px 310px 20px 310px;
+  }
+  &__Number {
+    grid-area: number;
+  }
+  &__Name {
+    grid-area: name;
+  }
+  &__Email {
+    grid-area: email;
+  }
+  &__Number,
+  &__Name,
+  &__Email {
+    margin-bottom: 35px;
+  }
+  &__Message {
+    grid-area: message;
+    margin-bottom: 20px;
+    padding-bottom: 60px;
+  }
+  &__Submit {
+    grid-area: button;
+    width: 150px;
+    margin: 0 0 0 auto;
+    cursor: pointer;
+  }
+}
+input,
+button {
+  all: unset;
+  outline: none;
+  border: none;
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+input,
+input::before,
+input:active {
+  border: 2px solid rgb(150, 1, 1);
+  background: rgb(245, 182, 182);
+  color: rgb(84, 84, 84);
+  padding-left: 5px;
+}
+button {
+  background: rgb(177, 21, 21);
+  color: whitesmoke;
+  text-align: center;
+  &:hover {
+    background: rgb(112, 5, 5);
+  }
+}

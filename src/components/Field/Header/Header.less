@@ -1,0 +1,57 @@
+.Header {
+  border-bottom: 2px solid black;
+  background: linear-gradient(#e6e4e4, #fcfcff);
+  display: flex;
+  min-width: 100vw;
+  padding-bottom: 80px;
+  justify-content: center;
+  position: fixed;
+  z-index: 5000;
+  padding: 0;
+  &__Novelty,
+  &__Komplex,
+  &__Granulation,
+  &__Equipment,
+  &__Services,
+  &__Company {
+    cursor: pointer;
+    padding: 30px;
+    height: 30px;
+    &:hover {
+      background: rgb(94, 7, 7);
+      color: rgb(240, 228, 228);
+      transition: 500ms;
+    }
+    &--active {
+      background: rgb(94, 7, 7);
+      color: rgb(240, 228, 228);
+      border-right: 1px solid black;
+    }
+  }
+  &__Contact {
+    cursor: pointer;
+    padding: 30px;
+    height: 30px;
+    &--active {
+      background: rgb(36, 1, 1);
+      color: rgb(255, 255, 255);
+      border-right: 1px solid black;
+    }
+  }
+  //   &__Contact {
+  //     cursor: pointer;
+  //     height: 40px;
+  //     padding: 30px 20px;
+  //     height: 40px;
+  //     background: rgb(145, 27, 27);
+  //     border-right: 1px solid black;
+  //     font-size: 13px;
+  //     color: rgb(243, 231, 231);
+  //     &--active {
+  //       background: rgb(145, 27, 27);
+  //       border-right: 1px solid black;
+  //       font-size: 13px;
+  //       color: rgb(243, 231, 231);
+  //     }
+  //   }
+}

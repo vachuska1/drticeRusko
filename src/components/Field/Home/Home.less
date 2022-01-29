@@ -1,0 +1,142 @@
+.Home {
+  display: grid;
+  margin-top: 90px;
+  text-align: justify;
+  width: 100%;
+  height: auto;
+  &__Content,
+  &__PicturesCont {
+    margin: 0 auto;
+    width: 1000px;
+  }
+  &__Item,
+  &__Poly {
+    margin: 60px auto 10px auto;
+    text-align: center;
+    font-size: 38px;
+    font-weight: 600;
+  }
+  &__Video {
+    margin: 10px auto 20px auto;
+  }
+  &__Paragraph {
+    width: 1000px;
+    margin: 0 auto;
+    color: rgb(80, 71, 71);
+    line-height: 1.6;
+    font-size: 19px;
+    word-spacing: 2px;
+  }
+  &__Column {
+    width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template:
+      "items1 . items2 . items3" auto
+      "text1 . text2 . text3" auto
+      "pale1 . pale2 . pale3" auto
+      "item1 . item2 . item3" auto /
+      32% 2% 32% 2% 32%;
+  }
+  &__ItemsOne {
+    grid-area: items1;
+  }
+  &__ItemsTwo {
+    grid-area: items2;
+  }
+  &__ItemsThree {
+    grid-area: items3;
+  }
+  &__TextOne {
+    grid-area: text1;
+  }
+  &__TextTwo {
+    grid-area: text2;
+  }
+  &__TextThree {
+    grid-area: text3;
+  }
+  &__TextOne,
+  &__TextTwo,
+  &__TextThree {
+    margin: 20px 0;
+    word-wrap: break-word;
+    color: rgb(136, 125, 125);
+    line-height: 1.6;
+    font-size: 17px;
+    word-spacing: 2px;
+  }
+  &__PaleOne,
+  &__PaleTwo,
+  &__PaleThree {
+    margin: 10px 5px;
+    padding: 7px 10px;
+    width: auto;
+    height: auto;
+    transform: skew(-10deg);
+    background: #bd0808;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+  }
+  &__PaleOne {
+    grid-area: pale1;
+  }
+  &__PaleTwo {
+    grid-area: pale2;
+  }
+  &__PaleThree {
+    grid-area: pale3;
+  }
+  &__ItemOne {
+    grid-area: item1;
+  }
+  &__ItemTwo {
+    grid-area: item2;
+  }
+  &__ItemThree {
+    grid-area: item3;
+  }
+  &__PicturesCont {
+    display: flex;
+    margin: 40px auto;
+    justify-content: space-between;
+    height: auto;
+  }
+  &__Picture {
+    background: url(../../../images/ForWeb/ForWeb1.jpg) no-repeat center;
+    background-size: cover;
+    width: 622px;
+    height: 156px;
+  }
+  &__Button {
+    width: 280px;
+    background: rgb(189, 25, 25);
+    height: 40px;
+    margin: 40px auto 0;
+    color: white;
+    padding-top: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+      background: rgb(99, 4, 4);
+    }
+  }
+  &__ElementPoly {
+    margin: 0;
+    width: 100vw;
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    height: auto;
+    background: linear-gradient(180deg, rgb(135, 7, 7), rgb(255, 11, 11));
+  }
+  &__Element {
+    text-align: center;
+    margin: 40px 0;
+  }
+  &__Poly3 {
+    margin: 10px auto 10px auto;
+  }
+}

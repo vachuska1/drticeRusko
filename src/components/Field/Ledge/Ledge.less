@@ -1,0 +1,44 @@
+.Ledge {
+  background-color: rgb(49, 42, 42);
+  color: rgb(186, 172, 172);
+  height: 300px;
+  width: 100vw;
+  &__MenuLine {
+    margin: auto;
+    padding: 30px 0;
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    span {
+      cursor: pointer;
+    }
+  }
+  &__Cont {
+    margin: 10px auto;
+    width: 1000px;
+    font-size: 13px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    display: grid;
+    grid-template:
+      "column1 . column2 . column3" auto/
+      32% 2% 32% 2% 32%;
+  }
+  &__ColumnOne {
+    grid-area: column1;
+  }
+  &__ColumnTwo {
+    grid-area: column2;
+    margin: auto;
+  }
+  &__Logo {
+    width: 100px;
+    height: 100px;
+  }
+  &__ColumnThree {
+    text-align: left;
+    display: grid;
+    grid-area: column3;
+  }
+}
