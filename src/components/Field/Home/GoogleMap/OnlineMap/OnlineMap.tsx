@@ -6,19 +6,19 @@ import { Marks } from "./Marks/Marks";
 
 export const OnlineMap = () => {
   const [viewport, setViewport] = useState({
-    latitude: 50.0732,
-    longitude: 22.438,
+    latitude: 52.603241,
+    longitude: 39.572941,
     width: "100vw",
     height: "350px",
-    zoom: 2,
+    zoom: 2.5,
   });
   return (
     <div className="OnlineMap">
       {" "}
       <ReactMapGl
         {...viewport}
-        mapboxApiAccessToken="pk.eyJ1IjoidmFjaHVza2ExIiwiYSI6ImNreXNycGZxZDEwNHAydXRncHl6bmoxeHEifQ.6AKOqg6s7xYUuOCIYSEs9Q"
-        mapStyle="mapbox://styles/vachuska1/ckyuougew002c14lc74a44j31"
+        mapboxApiAccessToken="pk.eyJ1IjoidmFjaHVza2ExIiwiYSI6ImNsNmRmZ2FwdTA1MTQzanFveHYxenFjY2QifQ.Z5wA7QsLdUA3z5n_1a_Zhw"
+        mapStyle="mapbox://styles/vachuska1/cl3k7jixe000314nxhbstvzku"
         onViewportChange={(viewport) => {
           setViewport(viewport);
         }}

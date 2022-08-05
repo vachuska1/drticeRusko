@@ -6,6 +6,8 @@ import { Contents } from "./Contents/Contents";
 import { Home } from "./Home/Home";
 import { Ledge } from "./Ledge/Ledge";
 import { Content } from "./Content/Content";
+import { Shredder } from "./Shredder/Shredder";
+import { Printer } from "./Printer/Printer";
 
 export const Field: React.FC = () => {
   return (
@@ -15,8 +17,9 @@ export const Field: React.FC = () => {
         <div className="Field">
           <Switch>
             <Route path="/" exact component={Home} />
-            <Route path="/Comp" component={Contents} />
-            <Route path="/Content" component={Content} />
+            <Route path="/Drtice" component={Shredder} />
+            <Route path="/Enviro" component={Content} />
+            <Route path="/3Dtisk" component={Printer} />
           </Switch>
         </div>
         <Ledge />

@@ -1,0 +1,6 @@
+mapbox://styles/vachuska1/ckyuougew002c14lc74a44j31
+
+pk.eyJ1IjoidmFjaHVza2ExIiwiYSI6ImNsNmRmZ2FwdTA1MTQzanFveHYxenFjY2QifQ.Z5wA7QsLdUA3z5n_1a_Zhw
+
+https://api.mapbox.com/styles/v1/vachuska1/ckyuougew002c14lc74a44j31/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoidmFjaHVza2ExIiwiYSI6ImNsNmRmZ2FwdTA1MTQzanFveHYxenFjY2QifQ.Z5wA7QsLdUA3z5n_1a_Zhw
+

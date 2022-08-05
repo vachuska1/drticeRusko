@@ -7,92 +7,83 @@ import { ToggleButton } from "react-bootstrap";
 import { MDBBtn } from "mdb-react-ui-kit";
 
 export const Header: React.FC = () => {
-  /* const values = [
-    { id: 1, text: "LI-1", className: "Header__Novelty--active" },
-    { id: 2, text: "LI-2", className: "Header__Komplex--active" },
-    { id: 3, text: "LI-3", className: "Header__Granulation--active" },
-    { id: 4, text: "LI-4", className: "Header__Equipment--active" },
-  ];
-  const [activeId, setActiveId] = useState<Number>(0);
-  const [toggleClass, setToggleClass] = useState();
+  const [activePrinter, setActivePrinter] = useState(false);
+  const [closePrinter, setClosePrinter] = useState(false);
+  const [click, setClick] = useState(false);
 
-  return (
-    <div className="Header">
-      {values.map((val) => (
-        <div
-          onClick={() => setActiveId(val.id)}
-          className={
-            toggleClass ? "Header__Novelty" : "Header__Novelty--active"
-          }
-        >
-          {val.text} -- {activeId === val.id ? "Active" : "Inactive"}
-        </div>
-      ))}
-    </div>
-  );
-};
-*/
-  {
-    const [isActive, setActive] = useState(false);
-    const toggleClass = () => {
-      setActive(!isActive);
-    };
-  }
+  const toggleClassPrinter = () => {
+    setClosePrinter(!closePrinter);
+    setActivePrinter(!activePrinter);
+  };
+
+  const toggleMenu = () => {
+    setClick(!click);
+  };
+
+  const ChangePage = (event) => {
+    document.body.className = "";
+    document.body.classList.add(event.currentTarget.id);
+  };
 
   return (
     <div>
       <div className="Header" id="myDIV">
+        <img
+          onClick={toggleClassPrinter}
+          className="Header__Logo"
+          src="./src/images/Icons/Menu/Menu.svg"
+        />
         <NavLink
           to="/"
           id="HeadMenu"
           className="Header__Contact"
           activeClassName="Header__Contact--active"
         >
-          <span className="Header__Number">774104020</span>
+          <span className="Header__Number">+420 602305209</span>
           <br />
-          <span className="Header__Email">ahoj@seznam.cz</span>
+          <span className="Header__Email">vachuska@ekostat.cz</span>
         </NavLink>
         <NavLink
-          to="/Comppsssss"
-          activeClassName="Header__Komplex--active"
-          className="Header__Komplex"
-        >
-          Komplex
-        </NavLink>
-        <NavLink
-          to="/Comp"
+          to="/Drtice"
           className="Header__Granulation"
-          activeClassName="Header__Granulation--active"
+          activeClassName="Header__Granulation--reactive"
         >
-          Granulace
+          Drtiče
         </NavLink>
         <NavLink
-          to="/Content"
-          className="Header__Equipment"
-          activeClassName="Header__Equipment--active"
+          to="/Conten"
+          className={`Header__Equipment ${
+            closePrinter ? "Header__Equipment--active" : ""
+          }`}
+          activeClassName="Header__Equipment--reactive"
         >
-          Vybavení
+          Enviro
         </NavLink>
         <NavLink
-          to="/novinky"
-          className="Header__Novelty"
-          activeClassName="Header__Novelty--active"
+          to="/3Dtisk"
+          onClick={() => {
+            window.location.href = "/3Dtisk";
+          }}
+          className={`Header__Printer ${
+            closePrinter ? "Header__Printer--active" : ""
+          }`}
+          activeClassName="Header__Printer--reactive"
         >
-          Novinky
+          3D-tisk
         </NavLink>
         <NavLink
           to="/sluzby"
-          className="Header__Services"
-          activeClassName="Header__Services--active"
-        >
-          Služby
-        </NavLink>
-        <NavLink
-          to="/spolenost"
           className="Header__Company"
-          activeClassName="Header__Company--active"
+          activeClassName="Header__Company--reactive"
         >
           Společnost
+        </NavLink>
+        <NavLink
+          to="/spolecnost"
+          className="Header__Services"
+          activeClassName="Header__Services--reactive"
+        >
+          Kontakty
         </NavLink>
       </div>
     </div>

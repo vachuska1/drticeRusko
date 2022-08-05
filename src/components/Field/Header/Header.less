@@ -3,13 +3,10 @@
   background: linear-gradient(#e6e4e4, #fcfcff);
   display: flex;
   min-width: 100vw;
-  padding-bottom: 80px;
   justify-content: center;
   position: fixed;
   z-index: 5000;
-  padding: 0;
-  &__Novelty,
-  &__Komplex,
+  &__Printer,
   &__Granulation,
   &__Equipment,
   &__Services,
@@ -27,6 +24,14 @@
       color: rgb(240, 228, 228);
       border-right: 1px solid black;
     }
+    &--reactive {
+      background: rgb(94, 7, 7);
+      color: rgb(240, 228, 228);
+      border-right: 1px solid black;
+    }
+  }
+  &__Logo {
+    display: none;
   }
   &__Contact {
     cursor: pointer;
@@ -38,20 +43,42 @@
       border-right: 1px solid black;
     }
   }
-  //   &__Contact {
-  //     cursor: pointer;
-  //     height: 40px;
-  //     padding: 30px 20px;
-  //     height: 40px;
-  //     background: rgb(145, 27, 27);
-  //     border-right: 1px solid black;
-  //     font-size: 13px;
-  //     color: rgb(243, 231, 231);
-  //     &--active {
-  //       background: rgb(145, 27, 27);
-  //       border-right: 1px solid black;
-  //       font-size: 13px;
-  //       color: rgb(243, 231, 231);
-  //     }
-  //   }
+}
+@media (max-width: 768px) {
+  .Header {
+    display: grid;
+    position: relative;
+    &__Printer,
+    &__Granulation,
+    &__Equipment,
+    &__Services,
+    &__Company {
+      display: none;
+      position: relative;
+      z-index: 100;
+      text-align: center;
+      padding: auto;
+      border-top: black 2px solid;
+      height: 1px;
+      font-size: 20px;
+      width: 100vw;
+      &--active {
+        display: block;
+      }
+    }
+    &__Logo {
+      z-index: 101;
+      display: block;
+      position: absolute;
+      top: 30px;
+      right: 50px;
+      width: 45px;
+      height: 45px;
+      padding-bottom: 0px;
+    }
+    &__Contact {
+      width: 100vw;
+      text-align: center;
+    }
+  }
 }
