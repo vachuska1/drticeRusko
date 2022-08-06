@@ -1,6 +1,5 @@
 import * as React from "react";
 import "./Printer.less";
-import "./PrinterSpecies/PrinterSpecies";
 import { PrinterSpecies } from "./PrinterSpecies/PrinterSpecies";
 import { Carousel } from "react-responsive-carousel";
 

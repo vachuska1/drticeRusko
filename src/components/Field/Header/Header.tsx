@@ -7,32 +7,30 @@ import { ToggleButton } from "react-bootstrap";
 import { MDBBtn } from "mdb-react-ui-kit";
 
 export const Header: React.FC = () => {
-  const [activePrinter, setActivePrinter] = useState(false);
   const [closePrinter, setClosePrinter] = useState(false);
   const [click, setClick] = useState(false);
 
-  const toggleClassPrinter = () => {
+  const toggleClass = () => {
+    setClick(!click);
     setClosePrinter(!closePrinter);
-    setActivePrinter(!activePrinter);
   };
 
   const toggleMenu = () => {
-    setClick(!click);
+    location.pathname.match(/^\/3Dtisk/) ? "Header__Printer--active" : "";
   };
-
-  const ChangePage = (event) => {
-    document.body.className = "";
-    document.body.classList.add(event.currentTarget.id);
+  const toggleMenuEnviro = () => {
+    location.pathname.match(/^\/Conten/) ? "Header__Equipment--active" : "";
   };
 
   return (
     <div>
       <div className="Header" id="myDIV">
-        <img
-          onClick={toggleClassPrinter}
-          className="Header__Logo"
-          src="./src/images/Icons/Menu/Menu.svg"
-        />
+        <div
+          onClick={toggleClass}
+          className={`Header__Logo ${
+            click ? "Header__Logo--active" : "Header__Logo"
+          }`}
+        ></div>
         <NavLink
           to="/"
           id="HeadMenu"
@@ -52,6 +50,7 @@ export const Header: React.FC = () => {
         </NavLink>
         <NavLink
           to="/Conten"
+          onClick={toggleMenuEnviro}
           className={`Header__Equipment ${
             closePrinter ? "Header__Equipment--active" : ""
           }`}
@@ -61,9 +60,7 @@ export const Header: React.FC = () => {
         </NavLink>
         <NavLink
           to="/3Dtisk"
-          onClick={() => {
-            window.location.href = "/3Dtisk";
-          }}
+          onClickCapture={toggleMenu}
           className={`Header__Printer ${
             closePrinter ? "Header__Printer--active" : ""
           }`}

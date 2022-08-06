@@ -57,9 +57,9 @@
       position: relative;
       z-index: 100;
       text-align: center;
-      padding: auto;
+      height: 3px;
+      padding: 5px auto;
       border-top: black 2px solid;
-      height: 1px;
       font-size: 20px;
       width: 100vw;
       &--active {
@@ -67,14 +67,19 @@
       }
     }
     &__Logo {
+      background-image: url(../../../images/Icons/Menu/Menu.svg);
       z-index: 101;
       display: block;
       position: absolute;
-      top: 30px;
+      top: 20px;
       right: 50px;
       width: 45px;
       height: 45px;
       padding-bottom: 0px;
+      &--active {
+        background-image: url(../../../images/Icons/Menu/cross.svg);
+        top: 17;
+      }
     }
     &__Contact {
       width: 100vw;

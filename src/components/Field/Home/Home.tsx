@@ -9,24 +9,33 @@ import { GoogleMap } from "./GoogleMap/GoogleMap";
 import { Inputs } from "./Inputs/Inputs";
 
 const images = [
-  { url: "./src/images/Carousel/Carousel1.jpg" },
-  { url: "./src/images/Carousel/Carousel2.jpg" },
-  { url: "./src/images/Carousel/Carousel3.jpg" },
-  { url: "./src/images/Carousel/Carousel4.jpg" },
+  { url: "./src/images/Carousel/Carousel1mob.jpg" },
+  { url: "./src/images/Carousel/Carousel2mob.jpg" },
+  { url: "./src/images/Carousel/Carousel3mob.jpg" },
+  { url: "./src/images/Carousel/Carousel4mob.jpg" },
 ];
 
 export const Home = () => {
   return (
     <div className="Home">
-      <Carousel showStatus={false} showThumbs={false}>
-        {images.map((image) => {
-          return (
-            <div>
-              <img src={image.url} />
-            </div>
-          );
-        })}
-      </Carousel>
+      <div className="Home__Carousel">
+        <Carousel
+          width="100vw"
+          autoPlay={true}
+          infiniteLoop={true}
+          showStatus={false}
+          showThumbs={false}
+          showIndicators={false}
+        >
+          {images.map((image) => {
+            return (
+              <div>
+                <img src={image.url} />
+              </div>
+            );
+          })}
+        </Carousel>
+      </div>
       <div className="Home__Content">
         <div className="Home__Item">Zařízení pro zpracování polymerů</div>
         <div className="Home__Video">
