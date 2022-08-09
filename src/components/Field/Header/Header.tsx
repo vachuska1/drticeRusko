@@ -37,26 +37,32 @@ export const Header: React.FC = () => {
           className="Header__Contact"
           activeClassName="Header__Contact--active"
         >
-          <span className="Header__Number">+420 602305209</span>
+          <img
+            className="Header__Image"
+            src="./src/images/Logo/HortenLogo.svg"
+          />
+          {/* <span className="Header__Number">+420 602305209</span>
           <br />
-          <span className="Header__Email">vachuska@ekostat.cz</span>
+          <span className="Header__Email">vachuska@ekostat.cz</span> */}
         </NavLink>
         <NavLink
           to="/Drtice"
-          className="Header__Granulation"
+          className={`Header__Granulation ${
+            closePrinter ? "Header__Granulation--active" : ""
+          }`}
           activeClassName="Header__Granulation--reactive"
         >
           Drtiče
         </NavLink>
         <NavLink
-          to="/Conten"
+          to="/Odpady"
           onClick={toggleMenuEnviro}
           className={`Header__Equipment ${
             closePrinter ? "Header__Equipment--active" : ""
           }`}
           activeClassName="Header__Equipment--reactive"
         >
-          Enviro
+          Zpracování odpadů
         </NavLink>
         <NavLink
           to="/3Dtisk"
@@ -66,18 +72,13 @@ export const Header: React.FC = () => {
           }`}
           activeClassName="Header__Printer--reactive"
         >
-          3D-tisk
+          3D tiskárny na beton
         </NavLink>
         <NavLink
-          to="/sluzby"
-          className="Header__Company"
-          activeClassName="Header__Company--reactive"
-        >
-          Společnost
-        </NavLink>
-        <NavLink
-          to="/spolecnost"
-          className="Header__Services"
+          to="/Kontakty"
+          className={`Header__Services ${
+            closePrinter ? "Header__Services--active" : ""
+          }`}
           activeClassName="Header__Services--reactive"
         >
           Kontakty

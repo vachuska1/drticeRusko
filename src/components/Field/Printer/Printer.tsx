@@ -42,7 +42,7 @@ const images500 = [{ url: "./src/images/Printer/S-500/1.jpg" }];
 export const Printer = () => {
   return (
     <div className="Printer">
-      <h1>Betonové 3D-tiskárny</h1>
+      <h1>Dodáváme 3D tiskárny na beton</h1>
       <div className="Printer__Species">
         <h2 className="Printer__Easy">Tiskárny pro dílenskou výrobu</h2>
         <PrinterSpecies

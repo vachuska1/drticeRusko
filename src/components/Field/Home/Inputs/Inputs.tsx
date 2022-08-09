@@ -10,9 +10,7 @@ export const Inputs = () => {
 
   return (
     <div className="Inputs">
-      <div className="Inputs__Text">
-        Potřebujete poradit od našich odborníků?
-      </div>
+      <div className="Inputs__Text">Potřebujete poradit?</div>
       <form className="Inputs__Form">
         <input
           className="Inputs__Name"

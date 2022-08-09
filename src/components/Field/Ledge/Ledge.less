@@ -1,44 +1,80 @@
 .Ledge {
   background-color: rgb(49, 42, 42);
-  color: rgb(186, 172, 172);
-  height: 300px;
+  color: rgb(255, 218, 218);
+  height: auto;
   width: 100vw;
   &__MenuLine {
     margin: auto;
     padding: 30px 0;
     width: 1000px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     text-transform: uppercase;
     span {
       cursor: pointer;
+      padding: 10px 5px;
+      color: rgb(255, 0, 85);
     }
   }
   &__Cont {
-    margin: 10px auto;
+    margin: 0 auto;
+    text-align: justify;
     width: 1000px;
     font-size: 13px;
+    line-height: 2.2;
     overflow-wrap: break-word;
     word-wrap: break-word;
     display: grid;
     grid-template:
-      "column1 . column2 . column3" auto/
+      "column1 . column2 . column3 " auto/
       32% 2% 32% 2% 32%;
   }
   &__ColumnOne {
     grid-area: column1;
+    margin: auto;
   }
   &__ColumnTwo {
     grid-area: column2;
     margin: auto;
   }
   &__Logo {
-    width: 100px;
-    height: 100px;
+    width: 250px;
+    height: auto;
   }
   &__ColumnThree {
-    text-align: left;
+    text-align: right;
     display: grid;
     grid-area: column3;
+    // color: rgb(255, 204, 204);
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .Ledge {
+    text-align: center;
+    height: auto;
+    width: max-content;
+    &__MenuLine {
+      width: 100vw;
+    }
+    &__Cont {
+      width: 100vw;
+      margin: 20px 20px 0 20px;
+      padding-bottom: 20px;
+      grid-template:
+        ". column1 ." auto ". column2 ." auto ". column3 ." auto/
+        5vw 90vw 5vw;
+    }
+    &__ColumnOne {
+      text-align: center;
+    }
+    &__ColumnThree {
+      text-align: center;
+      margin-top: 5px;
+      span {
+        padding: 10px 0;
+      }
+    }
   }
 }

@@ -8,6 +8,8 @@ import { Ledge } from "./Ledge/Ledge";
 import { Content } from "./Content/Content";
 import { Shredder } from "./Shredder/Shredder";
 import { Printer } from "./Printer/Printer";
+import { Contact } from "./Contact/Contact";
+import { Waste } from "./Waste/Waste";
 
 export const Field: React.FC = () => {
   return (
@@ -18,8 +20,9 @@ export const Field: React.FC = () => {
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/Drtice" component={Shredder} />
-            <Route path="/Enviro" component={Content} />
+            <Route path="/Odpady" component={Waste} />
             <Route path="/3Dtisk" component={Printer} />
+            <Route path="/Kontakty" component={Contact} />
           </Switch>
         </div>
         <Ledge />
