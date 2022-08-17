@@ -63,20 +63,20 @@ export const Home = () => {
       <br />
       <div className="Home__Content">
         <div className="Home__Item">Zařízení pro zpracování plastů</div>
-        <div className="Home__Video">
+        {/* <div className="Home__Video">
           <ReactPlayer
             url="https://www.youtube.com/watch?v=sLUcnbHNk1k"
             width="1000px"
             height="500px"
           />
-        </div>
-        <div className="Home__VideoMob">
+        </div> */}
+        {/* <div className="Home__VideoMob">
           <ReactPlayer
             url="https://www.youtube.com/watch?v=sLUcnbHNk1k"
             width="100vw"
             height="40vh"
           />
-        </div>
+        </div> */}
         <br />
         <div className="Home__Paragraph">
           Společnost Horten nabízí zařízení pro zpracování plastů a dalších

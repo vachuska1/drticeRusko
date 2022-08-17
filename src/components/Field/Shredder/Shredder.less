@@ -1,3 +1,81 @@
+h2 {
+  margin-top: 50px;
+}
 .Shredder {
-  margin-top: 100px;
+  margin: 100px auto 30px auto;
+  width: 1000px;
+  word-wrap: break-word;
+  &__Header {
+    font-size: 37px;
+  }
+  &__CarouselMob {
+    display: none;
+    display: relative;
+  }
+  &__CarouselDest {
+    margin-left: 200px;
+    top: 160px;
+    right: 100px;
+    position: absolute;
+  }
+  &__CarouselDestOne {
+    margin-left: 200px;
+    top: 200px;
+    right: 100px;
+    position: absolute;
+  }
+  &__CarouselTab,
+  &__CarouselTabOne {
+    display: none;
+  }
+  &__Species {
+    position: relative;
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .Shredder {
+    width: auto;
+    text-align: justify;
+    margin: 100px 10px 30px 10px;
+    &__CarouselDest,
+    &__CarouselDestOne {
+      display: none;
+    }
+    &__CarouselTab {
+      display: block;
+      margin-left: 200px;
+      top: 200px;
+      right: 100px;
+      position: absolute;
+    }
+    &__CarouselTabOne {
+      display: block;
+      margin-left: 200px;
+      top: 140px;
+      right: 100px;
+      position: absolute;
+    }
+    &__Species {
+      display: relative;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .Shredder {
+    width: 94vw;
+    text-align: justify;
+    margin: 0 10px;
+    &__CarouselMob {
+      width: 94vw;
+      margin-left: 12vw;
+      position: relative;
+      display: block;
+    }
+    &__CarouselDest,
+    &__CarouselTab,
+    &__CarouselTabOne {
+      display: none;
+    }
+  }
 }
