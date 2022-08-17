@@ -7,80 +7,78 @@ import { ToggleButton } from "react-bootstrap";
 import { MDBBtn } from "mdb-react-ui-kit";
 
 export const Header: React.FC = () => {
-  const [activePrinter, setActivePrinter] = useState(false);
   const [closePrinter, setClosePrinter] = useState(false);
   const [click, setClick] = useState(false);
 
-  const toggleClassPrinter = () => {
+  const toggleClass = () => {
+    setClick(!click);
     setClosePrinter(!closePrinter);
-    setActivePrinter(!activePrinter);
   };
 
   const toggleMenu = () => {
-    setClick(!click);
+    location.pathname.match(/^\/3Dtisk/) ? "Header__Printer--active" : "";
   };
-
-  const ChangePage = (event) => {
-    document.body.className = "";
-    document.body.classList.add(event.currentTarget.id);
+  const toggleMenuEnviro = () => {
+    location.pathname.match(/^\/Conten/) ? "Header__Equipment--active" : "";
   };
 
   return (
     <div>
       <div className="Header" id="myDIV">
-        <img
-          onClick={toggleClassPrinter}
-          className="Header__Logo"
-          src="./src/images/Icons/Menu/Menu.svg"
-        />
+        <div
+          onClick={toggleClass}
+          className={`Header__Logo ${
+            click ? "Header__Logo--active" : "Header__Logo"
+          }`}
+        ></div>
         <NavLink
           to="/"
           id="HeadMenu"
           className="Header__Contact"
           activeClassName="Header__Contact--active"
         >
-          <span className="Header__Number">+420 602305209</span>
+          <img
+            className="Header__Image"
+            src="./src/images/Logo/HortenLogo.svg"
+          />
+          {/* <span className="Header__Number">+420 602305209</span>
           <br />
-          <span className="Header__Email">vachuska@ekostat.cz</span>
+          <span className="Header__Email">vachuska@ekostat.cz</span> */}
         </NavLink>
         <NavLink
           to="/Drtice"
-          className="Header__Granulation"
+          className={`Header__Granulation ${
+            closePrinter ? "Header__Granulation--active" : ""
+          }`}
           activeClassName="Header__Granulation--reactive"
         >
           Drtiče
         </NavLink>
         <NavLink
-          to="/Conten"
+          to="/Odpady"
+          onClick={toggleMenuEnviro}
           className={`Header__Equipment ${
             closePrinter ? "Header__Equipment--active" : ""
           }`}
           activeClassName="Header__Equipment--reactive"
         >
-          Enviro
+          Zpracování odpadů
         </NavLink>
         <NavLink
           to="/3Dtisk"
-          onClick={() => {
-            window.location.href = "/3Dtisk";
-          }}
+          onClickCapture={toggleMenu}
           className={`Header__Printer ${
             closePrinter ? "Header__Printer--active" : ""
           }`}
           activeClassName="Header__Printer--reactive"
         >
-          3D-tisk
+          3D tiskárny na beton
         </NavLink>
         <NavLink
-          to="/sluzby"
-          className="Header__Company"
-          activeClassName="Header__Company--reactive"
-        >
-          Společnost
-        </NavLink>
-        <NavLink
-          to="/spolecnost"
-          className="Header__Services"
+          to="/Kontakty"
+          className={`Header__Services ${
+            closePrinter ? "Header__Services--active" : ""
+          }`}
           activeClassName="Header__Services--reactive"
         >
           Kontakty

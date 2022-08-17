@@ -9,18 +9,17 @@
   &__Printer,
   &__Granulation,
   &__Equipment,
-  &__Services,
-  &__Company {
+  &__Services {
     cursor: pointer;
     padding: 30px;
     height: 30px;
     &:hover {
-      background: rgb(94, 7, 7);
+      background: rgb(133, 7, 7);
       color: rgb(240, 228, 228);
       transition: 500ms;
     }
     &--active {
-      background: rgb(94, 7, 7);
+      background: rgb(133, 7, 7);
       color: rgb(240, 228, 228);
       border-right: 1px solid black;
     }
@@ -34,51 +33,77 @@
     display: none;
   }
   &__Contact {
+    position: relative;
     cursor: pointer;
     padding: 30px;
+    width: 100px;
     height: 30px;
     &--active {
-      background: rgb(36, 1, 1);
+      background: rgb(109, 2, 2);
       color: rgb(255, 255, 255);
       border-right: 1px solid black;
     }
   }
+  &__Image {
+    position: absolute;
+    top: -15px;
+    left: 5px;
+    width: 150px;
+  }
 }
-@media (max-width: 768px) {
+@media only screen and (max-width: 999px) {
+  .Header {
+    width: 103vw;
+  }
+}
+@media only screen and (max-width: 768px) {
   .Header {
     display: grid;
     position: relative;
+    border-bottom: none;
     &__Printer,
     &__Granulation,
     &__Equipment,
-    &__Services,
-    &__Company {
+    &__Services {
       display: none;
       position: relative;
       z-index: 100;
       text-align: center;
-      padding: auto;
+      height: 3px;
+      padding: 5px auto;
       border-top: black 2px solid;
-      height: 1px;
       font-size: 20px;
       width: 100vw;
       &--active {
         display: block;
       }
     }
+    &__Services {
+      border-bottom: 3px solid black;
+    }
     &__Logo {
+      background-image: url(../../../images/Icons/Menu/Menu.svg);
       z-index: 101;
       display: block;
       position: absolute;
-      top: 30px;
-      right: 50px;
+      top: 20px;
+      right: 10vw;
       width: 45px;
       height: 45px;
       padding-bottom: 0px;
+      &--active {
+        background-image: url(../../../images/Icons/Menu/cross.svg);
+        top: 17;
+      }
     }
     &__Contact {
       width: 100vw;
       text-align: center;
+    }
+    &__Image {
+      left: 20vw;
+      top: -30px;
+      width: 200px;
     }
   }
 }

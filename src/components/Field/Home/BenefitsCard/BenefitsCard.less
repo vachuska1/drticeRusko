@@ -1,5 +1,6 @@
 .BenefitsCard {
   display: grid;
+  padding-top: 15px;
   width: 100vw;
   background: rgb(237, 232, 232);
   &__Column,
@@ -11,6 +12,17 @@
   }
   &__Name {
     font-size: 35px;
+    text-align: center;
     font-weight: 700;
+  }
+}
+@media only screen and (max-width: 999px) {
+  .BenefitsCard {
+    &__Column,
+    &__Name {
+      width: 96vw;
+      display: block;
+      margin: 0 auto;
+    }
   }
 }

@@ -1,16 +1,14 @@
 .Printer {
-  margin: 100px auto 30px;
+  margin: 100px 10px 30px 10px;
   width: 1000px;
   &__Company {
     border-top: 2px solid red;
   }
 }
-@media (max-width: 999px) {
+@media only screen and (max-width: 768px) {
   .Printer {
-    text-align: center;
-    margin: 100px 3vw 30px 3vw;
-  }
-  p {
+    width: 94vw;
     text-align: justify;
+    margin: 0 10px;
   }
 }

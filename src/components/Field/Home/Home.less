@@ -1,5 +1,5 @@
 .Home {
-  display: grid;
+  display: block;
   margin-top: 90px;
   text-align: justify;
   width: 100%;
@@ -11,13 +11,17 @@
   }
   &__Item,
   &__Poly {
-    margin: 60px auto 10px auto;
+    margin: 40px auto 20px auto;
     text-align: center;
     font-size: 38px;
     font-weight: 600;
   }
   &__Video {
     margin: 10px auto 20px auto;
+  }
+  &__VideoMob,
+  &__CarouselMob {
+    display: none;
   }
   &__Paragraph {
     width: 1000px;
@@ -27,34 +31,14 @@
     font-size: 19px;
     word-spacing: 2px;
   }
-  &__Column {
+  &__Column,
+  &__SecondColumn {
     width: 1000px;
     margin: 0 auto;
-    display: grid;
-    grid-template:
-      "items1 . items2 . items3" auto
-      "text1 . text2 . text3" auto
-      "pale1 . pale2 . pale3" auto
-      "item1 . item2 . item3" auto /
-      32% 2% 32% 2% 32%;
-  }
-  &__ItemsOne {
-    grid-area: items1;
-  }
-  &__ItemsTwo {
-    grid-area: items2;
-  }
-  &__ItemsThree {
-    grid-area: items3;
-  }
-  &__TextOne {
-    grid-area: text1;
-  }
-  &__TextTwo {
-    grid-area: text2;
-  }
-  &__TextThree {
-    grid-area: text3;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   &__TextOne,
   &__TextTwo,
@@ -79,24 +63,6 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
   }
-  &__PaleOne {
-    grid-area: pale1;
-  }
-  &__PaleTwo {
-    grid-area: pale2;
-  }
-  &__PaleThree {
-    grid-area: pale3;
-  }
-  &__ItemOne {
-    grid-area: item1;
-  }
-  &__ItemTwo {
-    grid-area: item2;
-  }
-  &__ItemThree {
-    grid-area: item3;
-  }
   &__PicturesCont {
     display: flex;
     margin: 40px auto;
@@ -104,7 +70,7 @@
     height: auto;
   }
   &__Picture {
-    background: url(../../../images/ForWeb/ForWeb1.jpg) no-repeat center;
+    background: no-repeat center;
     background-size: cover;
     width: 622px;
     height: 156px;
@@ -134,14 +100,63 @@
   }
   &__Element {
     text-align: center;
-    margin: 40px 0;
+    margin: 40px 5px;
+    padding: 5px 0;
   }
-  &__Poly3 {
-    margin: 10px auto 10px auto;
+  &__Poly {
+    margin: 10px auto;
   }
 }
-@media (max-width: 768px) {
+
+@media only screen and (max-width: 999px) {
   .Home {
     margin-top: 0;
+    width: 100vw;
+    &__Video,
+    &__Carousel {
+      display: none;
+    }
+    &__VideoMob,
+    &__CarouselMob {
+      margin: 0;
+      display: block;
+    }
+    &__Content {
+      margin: 0;
+      width: 100vw;
+    }
+    &__Column,
+    &__SecondColumn {
+      width: 100vw;
+    }
+    &__Paragraph {
+      width: 96vw;
+    }
+    &__PicturesCont {
+      display: block;
+      width: 96vw;
+    }
+    &__Picture {
+      width: 96vw;
+      height: 24vh;
+    }
+    &__Button {
+      width: 250px;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .Home {
+    margin-top: 0;
+    width: 100vw;
+    &__Video,
+    &__Carousel {
+      display: none;
+    }
+    &__VideoMob,
+    &__CarouselMob {
+      margin: 0;
+      display: block;
+    }
   }
 }
